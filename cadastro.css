@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2b3b3; /* Rosa pêssego */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cadastro-container {
+    background-color: rgba(0, 0, 0, 0.85); /* Preto com 85% de transparência */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro-container h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form input {
+    flex: 1 1 calc(50% - 10px); /* Dois campos por linha */
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input[type="date"],
+form input[type="password"] {
+    flex: 1 1 100%; /* Campos especiais ocupam a linha inteira */
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e68080; /* Rosa pêssego escuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #cc6060; /* Rosa mais escuro */
+}
+
+@media (max-width: 768px) {
+    form input {
+        flex: 1 1 100%; /* Um campo por linha em telas menores */
+    }
+}

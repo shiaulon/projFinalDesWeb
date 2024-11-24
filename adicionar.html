@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Item - BonApettit</title>
+    <link rel="stylesheet" href="adicionar.css">
+    <script>
+        function formatarPreco(input) {
+            let valor = input.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+            // Se o valor for maior que 2 caracteres, formatar o número
+            if (valor.length > 2) {
+                valor = valor.replace(/(\d)(\d{2})$/, '$1,$2'); // Adiciona a vírgula para os centavos
+                valor = valor.replace(/(\d)(\d{3}),/, '$1.$2,'); // Adiciona o ponto para os milhares
+            }
+
+            input.value = 'R$ ' + valor; // Preenche o campo com o valor formatado
+        }
+    </script>
+</head>
+<body>
+    <section class="adicionar-item">
+        <h1>Adicionar Novo Item</h1>
+        <form action="adicionar.php" method="POST" enctype="multipart/form-data">
+
+            
+            <!-- Caixa de Seleção para Categorias -->
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="Sorvetes">Sorvetes</option>
+                <option value="Taças">Taças</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Especiais">Especiais</option>
+            </select>
+
+            <!-- Campo para Nome do Item -->
+            <label for="nome">Nome do Item:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Nome do item">
+
+            <!-- Campo para Descrição -->
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required placeholder="Descrição do item"></textarea>
+
+            <!-- Campo para Foto -->
+            <label for="foto">Foto do Item:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+
+            <!-- Campo para Preço -->
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" required placeholder="R$ 0,00" oninput="formatarPreco(this)">
+
+            <!-- Botão de Enviar -->
+            <button type="submit">Adicionar Item</button>
+        </form>
+    </section>
+</body>
+</html>
+

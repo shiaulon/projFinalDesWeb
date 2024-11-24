@@ -1,0 +1,96 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.logout-form {
+    display: inline-block;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.logout-icon {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+/* Layout do menu */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.category-box {
+    width: 200px;
+    height: 100px;
+    margin: 15px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+}
+
+.category-box:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.category-box h2 {
+    margin: 0;
+}

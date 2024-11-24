@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f8d7e3;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+/* Container principal */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo do logo */
+img {
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.button {
+    background-color: #f27d6c;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.button:hover {
+    background-color: #e66c58;
+}
+
+
+
+@media (max-width: 768px) {
+    img.logo {
+        max-width: 60px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
